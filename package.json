@@ -1,0 +1,55 @@
+{
+  "name": "package.jason",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^4.1.1",
+    "@types/cucumber": "^6.0.1",
+    "@types/cypress-cucumber-preprocessor": "^1.14.1",
+    "@types/mocha": "^8.0.3",
+    "@types/node": "^14.11.10",
+    "cucumber": "^6.0.5",
+    "cypress": "^5.5.0",
+    "cypress-cucumber-preprocessor": "2.3.1",
+    "cypress-file-upload": "^4.1.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "husky": "^4.2.3",
+    "mocha": "^8.1.1",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.0.2",
+    "ts-loader": "^8.0.3",
+    "tsify": "^5.0.2",
+    "typescript": "^4.0.3",
+    "webpack": "^4.41.6"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cy:verify": "cypress verify",
+    "cy:version": "cypress version",
+    "precy:run": "rm -rf cypress/screenshots cypress/reports && mkdir cypress/reports && mkdir cypress/reports/mochawesome-report",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "report": "run-s report:*",
+    "faker": "^5.1.0",
+    "husky": "^4.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NadaHassan91/OLX"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "commonPath": "cypress/integration/Common"
+  }
+}

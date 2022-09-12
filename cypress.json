@@ -1,0 +1,27 @@
+{
+  "projectId": "qdzuuc",
+  "baseUrl": "https://www.abibliadigital.com.br/api/",
+  "env": {
+    "envURL": "https://www.abibliadigital.com.br/api/"
+  },
+  "testFiles": "**/*.feature",
+  "reporter": "cypress-multi-reporters",
+  "viewportWidth": 1440,
+  "viewportHeight": 900,
+  "retries": {
+    "runMode": 2,
+    "openMode": 1
+  },
+  "chromeWebSecurity": false,
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mochawesome-report",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  }
+}
+
